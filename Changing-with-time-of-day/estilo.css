@@ -1,0 +1,45 @@
+body {
+    background: rgb(82, 83, 155);
+    font: normal 18pt Arial;
+}
+
+header {
+    font: normal 22pt Arial;
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.335);
+    text-align: center;
+}
+
+div {
+    padding: 10px;
+}
+
+img#imagem {
+    transition: all 0.5s;
+    cursor: auto;
+}
+
+img#imagem:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.1);
+}
+
+p#info {
+    font: normal 14pt Arial;
+    color: black;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font: italic 12pt Arial;
+}
