@@ -1,0 +1,42 @@
+body {
+    background: rgb(95, 73, 116);
+}
+
+header {
+    font: normal 22pt Arial;
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    margin: auto;
+    width: 500px;
+    padding: 12px;
+    font: normal 18pt Arial;
+    color: black;
+}
+
+input {
+    background: white;
+    border-radius: 12px;
+    border-color: black;
+    font: normal 16pt Arial;
+}
+
+select {
+    width: 500px;
+    background: white;
+    border-radius: 3px;
+    border-width: 3px;
+    border-color: black;
+    padding: 10px;
+    font: normal 16pt Arial;
+}
+
+footer {
+    font: italic 14pt Arial;
+    color: white;
+    text-align: center;
+}
