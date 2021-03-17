@@ -1,0 +1,35 @@
+body {
+    background: rgb(52, 102, 104);
+}
+
+header {
+    font: normal 20pt Arial;
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    font: normal 18pt Arial;
+    color: black;
+    padding: 12px;
+    width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+}
+
+input {
+    font: normal 16pt Arial;
+    border-radius: 12px;
+}
+
+input#bcontar {
+    font: normal 14pt Arial;
+}
+
+footer {
+    font: italic 14pt Arial;
+    color: white;
+    text-align: center;
+}
