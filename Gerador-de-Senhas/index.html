@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GERADOR DE SENHAS</h1>
+    </header>
+    
+    <section>
+        <div id="entrada">
+            <label>Tamanho da senha: <input type="number" name="qtdCaracteres" id="tamanho"></label>
+            <input type="button" value="GERAR" onclick="gerarSenha()" id="bGerar">
+        </div>
+
+        <div id="saida">
+            <p id="senhaGerada"><br></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; Luiz Henrique Lobo</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

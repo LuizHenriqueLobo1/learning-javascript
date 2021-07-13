@@ -1,0 +1,54 @@
+body {
+    background-color: #8360c3;
+}
+
+header {
+    font: normal 28pt Menlo;
+    color: black;
+    text-align: center;
+}
+
+section {
+    font: normal 18pt Consolas;
+    color: black;
+    text-align: center;
+    background: white;
+    width: 500px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.350);
+}
+
+input#tamanho {
+    font: normal 14pt Consolas;
+    color: black;
+    text-align: center;
+    width: 70px;
+    border-radius: 10px;
+}
+
+input#bGerar {
+    background-color: white;
+    font: normal 14pt Consolas;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+input#bGerar:hover {
+    background-color: #a895cc;
+}
+
+p#senhaGerada {
+    font: normal 22pt Consolas;
+    color:  black;
+}
+
+footer {
+    font: italic 16pt Arial;
+    color: black;
+    text-align: center;
+}
