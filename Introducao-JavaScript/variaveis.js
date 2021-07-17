@@ -1,6 +1,6 @@
-var   a 		// declara uma variável, opcional ser inicializada
-let   b 		// declara uma variável no escopo de um bloco, opcional ser inicializada
-const c = 1 	// declara uma variável constante, obrigatório ser inicializada
+var   a        // declara uma variável, opcional ser inicializada
+let   b        // declara uma variável no escopo de um bloco, opcional ser inicializada
+const c = 1    // declara uma variável constante, obrigatório ser inicializada
 
 // números
 let i   = 1
