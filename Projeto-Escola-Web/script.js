@@ -8,21 +8,23 @@ window.onload = function() {
 	btnExibirFormulario.addEventListener("click", abrirForm, false);
 }
 
-function cadastrar() {
+var qtdPessoas = 0
 
-	let pessoa = {
-		nome: 'Indefinido',
-		sexo: 'Indefinido',
-		idade: 0
-	};
+function cadastrar(qtdPessoas) {
 
-	pessoa.nome = document.querySelector('input#txtNome').value
-	pessoa.sexo = document.querySelector('select#sSexo').value
-	pessoa.idade = document.querySelector('input#numIdade').value
+	let nomes  = []
+	let sexos  = []
+	let idades = []
+
+	nomes[qtdPessoas]  = document.querySelector('input#txtNome').value
+	sexos[qtdPessoas]  = document.querySelector('select#sSexo').value
+	idades[qtdPessoas] = document.querySelector('input#numIdade').value
+
+	this.qtdPessoas++;
 
 	window.alert('Aluno cadastrado com sucesso!')
-
-	listarAlunos(pessoa)
+	console.log(nomes[qtdPessoas], sexos[qtdPessoas], idades[qtdPessoas])
+	console.log(this.qtdPessoas)
 }
 
 function cadastrarAluno() {
@@ -31,14 +33,6 @@ function cadastrarAluno() {
 
 function listarAlunos(pessoa) {
 	console.log('Função LISTAR chamada com sucesso!')
-
-	pNome = document.querySelector('p#pNome')
-	pSexo = document.querySelector('p#pSex')
-	pIdade = document.querySelector('p#pIdade')
-
-	pNome.innerHTML += ` ${pessoa.nome}`
-	pSexo.innerHTML += ` ${pessoa.sexo}`
-	pIdade.innerHTML += ` ${pessoa.idade}`
 }
 
 function alterarAluno() {
