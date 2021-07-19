@@ -3,22 +3,6 @@ body {
     background-size: cover;
 }
 
-label {
-    font: normal 14pt Arial;
-    color: rgba(255, 255, 255, 0.746);
-}
-
-input[type=button]:hover{
-    color: #E793C8;
-    font-size: 14pt;
-}
-
-.hide {
-    display: none;
-    height: 100px;
-    width: 100px;
-}
-
 header {
     background-color: rgb(53, 49, 52);
     font: normal 20pt Arial;
@@ -30,6 +14,18 @@ header {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
     margin: auto;
     display: block;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.966);
+    margin: 25px;
+    padding: 25px;
+    font: normal 12pt Arial;
+    color: black;
+    border-radius: 60px;
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.246);
+    cursor: pointer;
 }
 
 p#description {
@@ -48,7 +44,21 @@ div#entrada {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
 }
 
-div#formulario {
+input[type=button]:hover{
+    color: #E793C8;
+    font-size: 14pt;
+}
+
+.hide {
+    display: none;
+}
+
+label {
+    font: normal 14pt Arial;
+    color: rgba(255, 255, 255, 0.746);
+}
+
+div#cadastrar {
     background-color: rgb(53, 49, 52);
     font: normal 20pt Arial;
     width: 380px;
@@ -57,6 +67,20 @@ div#formulario {
     height: auto;
     border-radius: 12px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+
+div#listar {
+    background-color: rgb(53, 49, 52);
+    font: normal 20pt Arial;
+    color: white;
+    width: 720px;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+    padding: 1px;
+    padding-bottom: 25px;
 }
 
 div#divSexo {
@@ -94,18 +118,6 @@ p#infoClick {
     font: normal 14pt Arial;
     color: white;
     padding: 16px;
-}
-
-input {
-    background-color: rgba(255, 255, 255, 0.966);
-    margin: 25px;
-    padding: 25px;
-    font: normal 12pt Arial;
-    color: black;
-    border-radius: 60px;
-    border-color: rgba(255, 255, 255, 0);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.246);
-    cursor: pointer;
 }
 
 footer {

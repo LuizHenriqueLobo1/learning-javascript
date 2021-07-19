@@ -3,11 +3,18 @@ var sexos  = []
 var idades = []
 var qtdPessoas = 0
 
-var bCadastro = document.getElementById("bCadastrarAluno")
-bCadastro.addEventListener("click", function() {
-	let form = document.getElementById("formulario")
-	form.classList.toggle("hide")
-})
+function exibeDivs(id) {
+	if(document.getElementById(id).style.display == "block") {
+	  document.getElementById(id).style.display = "none";
+	  return;
+	}
+	Array.from(document.getElementsByClassName("hide")).forEach(
+	  div => (div.style.display = "none")
+	);
+	document.getElementById(id).style.display = "block";
+	if(id == "listar")
+		listar()
+}
 
 function cadastrar(qtdPessoas) {
 
@@ -21,21 +28,12 @@ function cadastrar(qtdPessoas) {
 	console.log(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
 }
 
-function cadastrarAluno() {
-	console.log('Função CADASTRAR chamada com sucesso!')
-}
-
-function listarAlunos(qtdPessoas) {
-	console.log('Função LISTAR chamada com sucesso!')
-
-	for(let i = 0; i < this.qtdPessoas; i++)
-		console.log(`Aluno: ${i+1} / Nome: ${nomes[i]} / Sexo: ${sexos[i]} / Idade: ${idades[i]}`)
-}
-
-function alterarAluno() {
-	console.log('Função ALTERAR chamada com sucesso!')
-}
-
-function removerAluno() {
-	console.log('Função REMOVER chamada com sucesso!')
+function listar(qtdPessoas) {
+	let list = document.getElementById("listaAlunos")
+	list.innerHTML = ''
+	if(this.qtdPessoas < 1)
+		list.innerHTML = 'Nenhum aluno cadastrado.'
+	for(let i = 0; i < this.qtdPessoas; i++) {
+		list.innerHTML += `Aluno ${i+1}: ${nomes[i]} / ${sexos[i]} / ${idades[i]}<br>`
+	}
 }

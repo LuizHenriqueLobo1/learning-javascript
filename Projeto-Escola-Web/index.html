@@ -14,15 +14,15 @@
     </header>
         <div id="entrada">
             <p></p>
-            <input type="button" value="Cadastrar Aluno" id="bCadastrarAluno" onclick="cadastrarAluno()"/>
-            <input type="button" value="Listar Alunos" id="bListarAlunos" onclick="listarAlunos()"/>
-            <input type="button" value="Alterar Aluno" id="bAlterarAluno" onclick="alterarAluno()"/>
-            <input type="button" value="Remover Aluno" id="bRemoverAluno" onclick="removerAluno()"/> 
+            <input type="button" value="Cadastrar Aluno" id="bCadastrarAluno" onclick="exibeDivs('cadastrar')"/>
+            <input type="button" value="Listar Alunos" id="bListarAlunos" onclick="exibeDivs('listar')"/>
+            <input type="button" value="Alterar Aluno" id="bAlterarAluno" onclick="exibeDivs('alterar')"/>
+            <input type="button" value="Remover Aluno" id="bRemoverAluno" onclick="exibeDivs('remover')"/> 
         </div>
     <section>
         <p></p>
-        <div class="hide" id="formulario">
-            <form id="formCadastroAluno">
+        <div class="hide" id="cadastrar">
+            <form id="formCadastro">
                 <label for="txtNome">Nome</label><input type="text" name="nome" id="txtNome" placeholder="Digite seu nome..."/>
                 <label for="listSexo">Sexo</label><br>
                 <select class="opcoes" name="sexo" id="sSexo">
@@ -35,9 +35,14 @@
                 <input type="button" value="Cadastrar" id="bCadastrar" onclick="cadastrar()">
             </form>
         </div>
+        <div class="hide" id="listar">
+            <h1 id="titleLista">Lista de Aluno</h1>
+            <div id="listaAlunos">
+                Alunos...
+            </div>
+        </div>
         <br>
     </section>
-
     <footer>
         <p>&copy; Luiz Henrique Lobo</p>
     </footer>
