@@ -8,31 +8,32 @@ window.onload = function() {
 	btnExibirFormulario.addEventListener("click", abrirForm, false);
 }
 
+var nomes  = []
+var sexos  = []
+var idades = []
 var qtdPessoas = 0
 
 function cadastrar(qtdPessoas) {
 
-	let nomes  = []
-	let sexos  = []
-	let idades = []
-
-	nomes[qtdPessoas]  = document.querySelector('input#txtNome').value
-	sexos[qtdPessoas]  = document.querySelector('select#sSexo').value
-	idades[qtdPessoas] = document.querySelector('input#numIdade').value
+	nomes[this.qtdPessoas]  = document.querySelector('input#txtNome').value
+	sexos[this.qtdPessoas]  = document.querySelector('select#sSexo').value
+	idades[this.qtdPessoas] = document.querySelector('input#numIdade').value
 
 	this.qtdPessoas++;
 
 	window.alert('Aluno cadastrado com sucesso!')
-	console.log(nomes[qtdPessoas], sexos[qtdPessoas], idades[qtdPessoas])
-	console.log(this.qtdPessoas)
+	console.log(`Aluno ${this.qtdPessoas} cadastrado.`)
 }
 
 function cadastrarAluno() {
 	console.log('Função CADASTRAR chamada com sucesso!')
 }
 
-function listarAlunos(pessoa) {
+function listarAlunos(qtdPessoas) {
 	console.log('Função LISTAR chamada com sucesso!')
+
+	for(let i = 0; i < this.qtdPessoas; i++)
+		console.log(`Aluno: ${i+1} Nome: ${nomes[i]} Sexo: ${sexos[i]} Idade: ${idades[i]}`)
 }
 
 function alterarAluno() {
