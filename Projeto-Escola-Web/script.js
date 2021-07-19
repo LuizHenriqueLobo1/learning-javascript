@@ -1,17 +1,13 @@
-window.onload = function() {
-	var btnExibirFormulario = document.getElementById("bCadastrarAluno");
-	var formularioExibido = document.getElementById("formCadastroAluno");
-	function abrirForm() {
-		formularioExibido.style.display = "table";
-	}
-	
-	btnExibirFormulario.addEventListener("click", abrirForm, false);
-}
-
 var nomes  = []
 var sexos  = []
 var idades = []
 var qtdPessoas = 0
+
+var bCadastro = document.getElementById("bCadastrarAluno")
+bCadastro.addEventListener("click", function() {
+	let form = document.getElementById("formulario")
+	form.classList.toggle("hide")
+})
 
 function cadastrar(qtdPessoas) {
 
@@ -21,8 +17,8 @@ function cadastrar(qtdPessoas) {
 
 	this.qtdPessoas++;
 
-	window.alert('Aluno cadastrado com sucesso!')
-	console.log(`Aluno ${this.qtdPessoas} cadastrado.`)
+	window.alert(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
+	console.log(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
 }
 
 function cadastrarAluno() {
@@ -33,7 +29,7 @@ function listarAlunos(qtdPessoas) {
 	console.log('Função LISTAR chamada com sucesso!')
 
 	for(let i = 0; i < this.qtdPessoas; i++)
-		console.log(`Aluno: ${i+1} Nome: ${nomes[i]} Sexo: ${sexos[i]} Idade: ${idades[i]}`)
+		console.log(`Aluno: ${i+1} / Nome: ${nomes[i]} / Sexo: ${sexos[i]} / Idade: ${idades[i]}`)
 }
 
 function alterarAluno() {
