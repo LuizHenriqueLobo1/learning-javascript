@@ -1,7 +1,13 @@
-var nomes  = []
-var sexos  = []
-var idades = []
-var qtdPessoas = 0
+class aluno {
+	constructor(nome, sexo, idade) {
+		this.nome = 'indefinido';
+		this.sexo = 'indefinido';
+		this.idade = 0;
+	}
+}
+
+var arrayAlunos = []
+var qtdAlunos = 0
 
 function exibeDivs(id) {
 	if(document.getElementById(id).style.display == "block") {
@@ -16,43 +22,46 @@ function exibeDivs(id) {
 		listar()
 }
 
-function cadastrar(qtdPessoas) {
+function cadastrar(qtdAlunos) {
 
-	nomes[this.qtdPessoas]  = document.querySelector('input#txtNome').value
-	sexos[this.qtdPessoas]  = document.querySelector('select#sSexo').value
-	idades[this.qtdPessoas] = document.querySelector('input#numIdade').value
+	let novoAluno = new aluno()
 
-	this.qtdPessoas++;
+	novoAluno.nome  = document.querySelector('input#txtNome').value
+	novoAluno.sexo  = document.querySelector('select#sSexo').value
+	novoAluno.idade = document.querySelector('input#numIdade').value
 
-	window.alert(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
+	arrayAlunos.push(novoAluno)
+
+	this.qtdAlunos++;
+
+	window.alert(`Aluno ${this.qtdAlunos} cadastrado com sucesso.`)
 }
 
-function listar(qtdPessoas) {
+function listar(qtdAlunos) {
 
 	let list = document.getElementById("listaAlunos")
 
 	list.textContent = ''
 	
-	if(this.qtdPessoas < 1)
+	if(this.qtdAlunos < 1)
 		list.textContent = 'Nenhum aluno cadastrado.'
 
-	for(let i = 0; i < this.qtdPessoas; i++) {
+	for(let i = 0; i < this.qtdAlunos; i++) {
 		const aluno = document.createElement('p')
 		aluno.id = `id${i+1}`
-		aluno.textContent = `Aluno ${i+1}: ${nomes[i]} / ${sexos[i]} / ${idades[i]}`
+		aluno.textContent = `Aluno ${i+1}: ${arrayAlunos[i].nome} / ${arrayAlunos[i].sexo} / ${arrayAlunos[i].idade}`
 		list.appendChild(aluno)
 	}
 }
 
-function remover(qtdPessoas) {
+
+function remover(qtdAlunos) {
 
 	let idAluno = document.getElementById("idAluno").value
 	
-	nomes.splice(idAluno-1, 1)
-	sexos.splice(idAluno-1, 1)
-	idades.splice(idAluno-1, 1)
+	arrayAlunos.splice(idAluno-1, 1)
 	
-	this.qtdPessoas--;
+	this.qtdAlunos--;
 
 	window.alert(`Aluno ${idAluno} removido com sucesso.`)
 }
