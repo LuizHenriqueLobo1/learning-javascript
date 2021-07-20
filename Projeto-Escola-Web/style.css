@@ -83,6 +83,19 @@ div#listar {
     padding-bottom: 25px;
 }
 
+div#remover {
+    background-color: rgb(53, 49, 52);
+    font: normal 20pt Arial;
+    color: white;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+    padding: 2px;
+    padding-top: 12px;
+}
+
 div#divSexo {
     text-align: left;
 }
@@ -107,12 +120,20 @@ p#pSexo {
 input#txtNome {
    padding: 12px;
    width: 300px;
+   cursor: text;
 }
 
 input#numIdade {
     padding: 10px;
     width: 300px;
- }
+    cursor: text;
+}
+
+input#idAluno {
+    width: 100px;
+    height: 10px;
+    cursor: text;
+}
 
 p#infoClick {
     font: normal 14pt Arial;

@@ -37,3 +37,10 @@ function listar(qtdPessoas) {
 		list.innerHTML += `Aluno ${i+1}: ${nomes[i]} / ${sexos[i]} / ${idades[i]}<br>`
 	}
 }
+
+function remover() {
+	let idAluno = document.getElementById("idAluno").value
+	nomes.splice(idAluno-1, 1);
+	sexos.splice(idAluno-1, 1);
+	idades.splice(idAluno-1, 1);
+}
