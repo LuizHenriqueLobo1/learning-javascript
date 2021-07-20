@@ -25,22 +25,34 @@ function cadastrar(qtdPessoas) {
 	this.qtdPessoas++;
 
 	window.alert(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
-	console.log(`Aluno ${this.qtdPessoas} cadastrado com sucesso.`)
 }
 
 function listar(qtdPessoas) {
+
 	let list = document.getElementById("listaAlunos")
-	list.innerHTML = ''
+
+	list.textContent = ''
+	
 	if(this.qtdPessoas < 1)
-		list.innerHTML = 'Nenhum aluno cadastrado.'
+		list.textContent = 'Nenhum aluno cadastrado.'
+
 	for(let i = 0; i < this.qtdPessoas; i++) {
-		list.innerHTML += `Aluno ${i+1}: ${nomes[i]} / ${sexos[i]} / ${idades[i]}<br>`
+		const aluno = document.createElement('p')
+		aluno.id = `id${i+1}`
+		aluno.textContent = `Aluno ${i+1}: ${nomes[i]} / ${sexos[i]} / ${idades[i]}`
+		list.appendChild(aluno)
 	}
 }
 
-function remover() {
+function remover(qtdPessoas) {
+
 	let idAluno = document.getElementById("idAluno").value
-	nomes.splice(idAluno-1, 1);
-	sexos.splice(idAluno-1, 1);
-	idades.splice(idAluno-1, 1);
+	
+	nomes.splice(idAluno-1, 1)
+	sexos.splice(idAluno-1, 1)
+	idades.splice(idAluno-1, 1)
+	
+	this.qtdPessoas--;
+
+	window.alert(`Aluno ${idAluno} removido com sucesso.`)
 }
