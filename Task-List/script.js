@@ -1,19 +1,19 @@
-var qtdNotes = 0
+let newTask   = document.getElementById('task')
+let placeTask = document.getElementById('container')
+let addTask   = document.getElementById('add')
 
-function saveNote(qtdNotes) {
-    
-    let note = document.getElementById('note').value 
-    let outputNote = document.getElementById('container')
-    let savedNote = document.createElement('p')
-    
-    if(this.qtdNotes < 6) {
-        document.getElementById('note').value = ''
-        
-        savedNote.textContent = `${note}`
-        
-        outputNote.appendChild(savedNote)
-        
-        this.qtdNotes++
-    } else
-        window.alert('Notes limit reached.')
+newTask.addEventListener('keypress', function(f) {
+    if(f.key == "Enter")
+        generateTask()
+})
+
+addTask.addEventListener('click', function(f) {
+    generateTask()
+})
+
+function generateTask() {
+    let task = document.createElement('p')
+    task.textContent = `${newTask.value}`
+    placeTask.appendChild(task)
+    document.getElementById('task').value = ''
 }

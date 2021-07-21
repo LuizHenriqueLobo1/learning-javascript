@@ -1,30 +1,29 @@
 body {
     background-color: black;
-    padding-top: 45px;
+    margin-top: 140px;
+    margin-bottom: 140px;
 }
 
 div#container {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     width: 600px;
-    height: 600px;
+    height: 100%;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
-    font-family: Segoe UI;
-    font-size: 16pt;
-    color: rgb(150, 150, 150);
 }
 
 input.t {
     background-color: rgb(50, 50, 50);
     border: none;
     border-radius: 12px;
+    padding: 10px;
+    outline: 0;
     font-family: Segoe UI;
     font-size: 18pt;
     color: rgb(150, 150, 150);
-    outline: 0;
-    padding: 10px;
 }
 
 input.b {
@@ -38,4 +37,18 @@ input.b {
 input.b:hover {
     color: rgb(180, 180, 180);
     cursor: pointer;
+}
+
+p {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 12px;
+    width: 400px;
+    margin: auto;
+    margin-top: 36px;
+    padding: 10px;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 18pt;
+    color: rgb(150, 150, 150);
 }
