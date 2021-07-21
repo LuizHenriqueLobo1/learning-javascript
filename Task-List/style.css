@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    padding-top: 45px;
+}
+
+div#container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 16pt;
+    color: rgb(150, 150, 150);
+}
+
+input.t {
+    background-color: rgb(50, 50, 50);
+    border: none;
+    border-radius: 12px;
+    font-family: Segoe UI;
+    font-size: 18pt;
+    color: rgb(150, 150, 150);
+    outline: 0;
+    padding: 10px;
+}
+
+input.b {
+    background: none;
+    border: none;
+    border-radius: 12px;
+    font-size: 26pt;
+    color: rgb(150, 150, 150);
+}
+
+input.b:hover {
+    color: rgb(180, 180, 180);
+    cursor: pointer;
+}
