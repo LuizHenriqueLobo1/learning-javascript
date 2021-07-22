@@ -51,12 +51,15 @@ function listar(qtdAlunos) {
 		let nome  = document.createElement('p')
 		let sexo  = document.createElement('p')
 		let idade = document.createElement('p')
+
 		aluno.setAttribute('id', `id${i+1}`)
 		aluno.setAttribute('class', 'divAluno')
+
 		aluno.textContent = `Aluno ${i+1}`
 		nome.textContent = `Nome: ${arrayAlunos[i].nome}`
 		sexo.textContent = `Sexo: ${arrayAlunos[i].sexo}`
 		idade.textContent = `Idade: ${arrayAlunos[i].idade}`
+		
 		aluno.appendChild(nome)
 		aluno.appendChild(sexo)
 		aluno.appendChild(idade)
@@ -64,13 +67,20 @@ function listar(qtdAlunos) {
 	}
 }
 
+function alterar() {
+	window.alert('Ainda sendo implementado...')
+}
+
 function remover(qtdAlunos) {
 
-	let idAluno = document.getElementById("idAluno").value
-	
-	arrayAlunos.splice(idAluno-1, 1)
-	
-	this.qtdAlunos--;
+	if(this.qtdAlunos > 0) {
+		let idAluno = document.getElementById("idAluno").value
 
-	window.alert(`Aluno ${idAluno} removido com sucesso.`)
+		arrayAlunos.splice(idAluno-1, 1)
+		
+		this.qtdAlunos--;
+		
+		window.alert(`Aluno ${idAluno} removido com sucesso.`)
+	} else
+		window.alert('Nenhum aluno na lista.')
 }

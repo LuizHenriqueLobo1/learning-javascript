@@ -24,7 +24,7 @@
         <div class="hide" id="cadastrar">
             <form id="formCadastro">
                 <label for="txtNome">Nome</label><input type="text" name="nome" id="txtNome" placeholder="Digite seu nome..."/>
-                <label for="listSexo">Sexo</label><br>
+                <label for="sSexo">Sexo</label><br>
                 <select class="opcoes" name="sexo" id="sSexo">
                     <option disabled="disabled" selected="selected">Escolha sua opção</option>
                     <option>Masculino</option>
@@ -40,6 +40,11 @@
             <div id="listaAlunos">
                 Alunos...
             </div>
+        </div>
+        <div class="hide" id="alterar">
+            <label for="alterarAluno">Digite o ID do aluno</label><br>
+            <input type="number" id="alterarAluno"><br>
+            <input type="button" value="Alterar" id="btnAlterar" onclick="alterar()">
         </div>
         <div class="hide" id="remover">
             <label for="idAluno">Digite o ID do aluno</label><br>
