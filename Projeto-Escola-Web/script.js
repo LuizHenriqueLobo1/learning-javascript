@@ -47,13 +47,22 @@ function listar(qtdAlunos) {
 		list.textContent = 'Nenhum aluno cadastrado.'
 
 	for(let i = 0; i < this.qtdAlunos; i++) {
-		const aluno = document.createElement('p')
-		aluno.id = `id${i+1}`
-		aluno.textContent = `Aluno ${i+1}: ${arrayAlunos[i].nome} / ${arrayAlunos[i].sexo} / ${arrayAlunos[i].idade}`
+		let aluno = document.createElement('div')
+		let nome  = document.createElement('p')
+		let sexo  = document.createElement('p')
+		let idade = document.createElement('p')
+		aluno.setAttribute('id', `id${i+1}`)
+		aluno.setAttribute('class', 'divAluno')
+		aluno.textContent = `Aluno ${i+1}`
+		nome.textContent = `Nome: ${arrayAlunos[i].nome}`
+		sexo.textContent = `Sexo: ${arrayAlunos[i].sexo}`
+		idade.textContent = `Idade: ${arrayAlunos[i].idade}`
+		aluno.appendChild(nome)
+		aluno.appendChild(sexo)
+		aluno.appendChild(idade)
 		list.appendChild(aluno)
 	}
 }
-
 
 function remover(qtdAlunos) {
 

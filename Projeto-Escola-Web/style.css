@@ -141,6 +141,17 @@ p#infoClick {
     padding: 16px;
 }
 
+.divAluno {
+    background-color: rgba(0, 0, 0, 0.500);
+    border-radius: 40px;
+    width: 500px;
+    margin: auto;
+    margin-top: 25px;
+    padding: 4px;
+    padding-top: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.246);
+}
+
 footer {
     background-color: rgb(53, 49, 52);
     width: 180px;
