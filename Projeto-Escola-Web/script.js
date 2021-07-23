@@ -14,9 +14,15 @@ function exibeDivs(id) {
 	  document.getElementById(id).style.display = "none";
 	  return;
 	}
-	Array.from(document.getElementsByClassName("hide")).forEach(
-	  div => (div.style.display = "none")
-	);
+	if(document.getElementById(id).classList.contains("hide")) {
+		Array.from(document.getElementsByClassName("hide")).forEach(
+			div => (div.style.display = "none")
+		);
+	} else {
+		Array.from(document.getElementsByClassName("aHide")).forEach(
+			div => (div.style.display = "none")
+		);
+	}
 	document.getElementById(id).style.display = "block";
 	if(id == "listar")
 		listar()
@@ -67,9 +73,18 @@ function listar(qtdAlunos) {
 	}
 }
 
-function alterar() {
-	window.alert('Ainda sendo implementado...')
-}
+let btnAlterarNome = document.getElementById('btnAlterarNome')
+btnAlterarNome.addEventListener('click', (n) => {
+	window.alert("Botão de alterar nome acionado com sucesso.")
+})
+let btnAlterarSexo = document.getElementById('btnAlterarSexo')
+btnAlterarSexo.addEventListener('click', (s) => {
+	window.alert("Botão de alterar sexo acionado com sucesso.")
+})
+let btnAlterarIdade = document.getElementById('btnAlterarIdade')
+btnAlterarIdade.addEventListener('click', (i) => {
+	window.alert("Botão de alterar idade acionado com sucesso.")
+})
 
 function remover(qtdAlunos) {
 

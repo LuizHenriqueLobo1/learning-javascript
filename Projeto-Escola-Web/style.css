@@ -53,6 +53,10 @@ input[type=button]:hover{
     display: none;
 }
 
+.aHide {
+    display: none;
+}
+
 label {
     font: normal 14pt Arial;
     color: rgba(255, 255, 255, 0.746);
@@ -88,7 +92,7 @@ div#alterar {
     background-color: rgb(53, 49, 52);
     font: normal 20pt Arial;
     color: white;
-    width: 400px;
+    width: 500px;
     margin: auto;
     text-align: center;
     border-radius: 12px;
@@ -140,13 +144,25 @@ input#numIdade {
 }
 
 input#alterarAluno {
-    width: 100px;
+    width: 120px;
     height: 10px;
     cursor: text;
 }
 
+input#novoNome {
+    padding: 12px;
+    width: 240px;
+    cursor: text;
+}
+
+input#novaIdade {
+    padding: 10px;
+    width: 165px;
+    cursor: text;
+}
+
 input#idAluno {
-    width: 100px;
+    width: 120px;
     height: 10px;
     cursor: text;
 }

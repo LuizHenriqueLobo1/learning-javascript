@@ -43,12 +43,35 @@
         </div>
         <div class="hide" id="alterar">
             <label for="alterarAluno">Digite o ID do aluno</label><br>
-            <input type="number" id="alterarAluno"><br>
-            <input type="button" value="Alterar" id="btnAlterar" onclick="alterar()">
+            <input type="number" id="alterarAluno" placeholder="Digite o ID..."><br>
+            <label>O que deseja alterar?</label><br>
+            <input type="button" value="Nome" id="alterarNome" onclick="exibeDivs('divNovoNome')">
+            <input type="button" value="Sexo" id="alterarSexo" onclick="exibeDivs('divNovoSexo')">
+            <input type="button" value="Idade" id="alterarIdade" onclick="exibeDivs('divNovaIdade')">
+                <div class="aHide" id="divNovoNome">
+                    <label for="novoNome">Novo Nome</label>
+                    <input type="text" id="novoNome" placeholder="Digite o novo nome...">
+                    <input type="button" id="btnAlterarNome" value="Alterar">
+                </div>
+                <div class="aHide" id="divNovoSexo">
+                    <label for="sNovoSexo">Novo Sexo</label>
+                    <select class="opcoes" name="novoSexo" id="sNovoSexo">
+                        <option disabled="disabled" selected="selected">Escolha sua opção</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outros</option>
+                    </select><br>
+                    <input type="button" id="btnAlterarSexo" value="Alterar">
+                </div>
+                <div class="aHide" id="divNovaIdade">
+                    <label for="novaIdade">Nova Idade</label>
+                    <input type="text" id="novaIdade" placeholder="Digite a nova idade...">
+                    <input type="button" id="btnAlterarIdade" value="Alterar">
+                </div>
         </div>
         <div class="hide" id="remover">
             <label for="idAluno">Digite o ID do aluno</label><br>
-            <input type="number" id="idAluno"><br>
+            <input type="number" id="idAluno" placeholder="Digite o ID..."><br>
             <input type="button" value="Remover" id="btnRemover" onclick="remover()">
         </div>
         <br>
