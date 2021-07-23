@@ -74,16 +74,27 @@ function listar(qtdAlunos) {
 }
 
 let btnAlterarNome = document.getElementById('btnAlterarNome')
-btnAlterarNome.addEventListener('click', (n) => {
-	window.alert("Botão de alterar nome acionado com sucesso.")
+btnAlterarNome.addEventListener('click', () => {
+	let idAluno  = document.getElementById('alterarAluno').value
+	let novoNome = document.getElementById('novoNome').value
+	arrayAlunos[idAluno-1].nome = novoNome
+	window.alert(`Nome do aluno ${idAluno} alterado para ${novoNome} com sucesso.`)
 })
+
 let btnAlterarSexo = document.getElementById('btnAlterarSexo')
-btnAlterarSexo.addEventListener('click', (s) => {
-	window.alert("Botão de alterar sexo acionado com sucesso.")
+btnAlterarSexo.addEventListener('click', () => {
+	let idAluno  = document.getElementById('alterarAluno').value
+	let novoSexo = document.getElementById('sNovoSexo').value
+	arrayAlunos[idAluno-1].sexo = novoSexo
+	window.alert(`Sexo do aluno ${idAluno} alterado para ${novoSexo} com sucesso.`)
 })
+
 let btnAlterarIdade = document.getElementById('btnAlterarIdade')
-btnAlterarIdade.addEventListener('click', (i) => {
-	window.alert("Botão de alterar idade acionado com sucesso.")
+btnAlterarIdade.addEventListener('click', () => {
+	let idAluno   = document.getElementById('alterarAluno').value
+	let novaIdade = document.getElementById('novaIdade').value
+	arrayAlunos[idAluno-1].idade = novaIdade
+	window.alert(`Idade do aluno ${idAluno} alterada para ${novaIdade} com sucesso.`)
 })
 
 function remover(qtdAlunos) {
