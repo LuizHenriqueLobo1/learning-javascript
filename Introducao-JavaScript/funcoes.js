@@ -19,3 +19,27 @@ function atribui() {
 
 let a = atribui()
 console.log(a)
+
+// declarando array de strings
+let pessoas = [
+    'Nabucodonosor',
+    'Gertrudes',
+    'Vicente'
+]
+
+// usando arrow function para descobrir,
+// o tamanho de cada string do array
+console.log(pessoas.map(pessoas => pessoas.length))
+
+// declarando array de números e strings
+let array = [
+    '4',
+    6.5,
+    5,
+    '2.2',
+    3
+]
+
+// usando arrow function para montar array
+// e dizer quais elementos são números
+console.log(array.map(array => typeof(array) == 'number'))
