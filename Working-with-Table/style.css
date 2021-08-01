@@ -21,6 +21,7 @@ table, th, td {
     border-collapse: collapse;
     width: 1000px;
     margin: auto;
+    margin-bottom: 100px;
     padding: 25px;
     font-family: Segoe UI;
     font-size: 22pt;
@@ -34,4 +35,16 @@ th {
 
 td {
     height: 80px;
+}
+
+footer {
+    background-color: white;
+    border-top: 35px solid #843fd3bb;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: Segoe UI;
+    font-size: 16px;
+    text-align: center;
 }
