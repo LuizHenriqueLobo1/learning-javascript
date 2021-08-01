@@ -1,0 +1,37 @@
+body {
+    background-color: #843fd3bb;
+}
+
+h1 {
+    background-color: white;
+    border: 3px solid black;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-family: Bebas Neue;
+    font-size: 60pt;
+    text-align: center;
+}
+
+table, th, td {
+    background-color: white;
+    border: 3px solid black;
+    border-collapse: collapse;
+    width: 1000px;
+    margin: auto;
+    padding: 25px;
+    font-family: Segoe UI;
+    font-size: 22pt;
+    text-align: center;
+}
+
+th {
+    font-size: 24pt;
+    height: 20px;
+}
+
+td {
+    height: 80px;
+}
