@@ -1,5 +1,5 @@
 let newTask   = document.getElementById('task')
-let placeTask = document.getElementById('container')
+let placeTask = document.querySelector('.container')
 let addTask   = document.getElementById('add')
 
 newTask.addEventListener('keypress', function(f) {
