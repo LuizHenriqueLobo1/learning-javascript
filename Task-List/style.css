@@ -39,7 +39,7 @@ body {
     cursor: pointer;
 }
 
-p {
+.new-task {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 12px;

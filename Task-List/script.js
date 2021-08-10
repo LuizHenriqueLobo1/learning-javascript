@@ -12,8 +12,11 @@ addTask.addEventListener('click', function(f) {
 })
 
 function generateTask() {
+    let field = document.createElement('div')
     let task = document.createElement('p')
+    field.setAttribute('class', 'new-task')
     task.textContent = `${newTask.value}`
-    placeTask.appendChild(task)
+    field.appendChild(task)
+    placeTask.appendChild(field)
     document.getElementById('task').value = ''
 }
