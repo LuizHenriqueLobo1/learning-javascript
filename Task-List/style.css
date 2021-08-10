@@ -39,6 +39,18 @@ body {
     cursor: pointer;
 }
 
+.delete {
+    background: none;
+    border: none;
+    font-family: Segoe UI;
+    font-size: 14pt;
+}
+
+.delete:hover {
+    color: rgb(100, 0, 0);
+    cursor: pointer;
+}
+
 .new-task {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;

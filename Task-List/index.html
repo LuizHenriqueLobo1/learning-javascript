@@ -14,8 +14,9 @@
             <input class="btn" type="button" value="+" id="add">
         </div>
         <div class="content">
-            <div class="new-task">
+            <div class="new-task" id="task0">
                 <p>New task here!</p>
+                <input class="delete" type="button" value="x" onclick="deleteTask(`${this.parentNode.id}`)">
             </div>
         </main>
     </div>
