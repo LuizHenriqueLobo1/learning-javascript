@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 body {
     background-color: black;
+    background-attachment: fixed;
     margin-top: 140px;
     margin-bottom: 140px;
 }
@@ -12,6 +15,7 @@ body {
     margin: auto;
     padding-top: 60px;
     padding-bottom: 60px;
+    font-family: 'Open Sans';
     text-align: center;
 }
 
@@ -21,7 +25,7 @@ body {
     border-radius: 12px;
     padding: 10px;
     outline: 0;
-    font-family: Segoe UI;
+    font-family: 'Open Sans';
     font-size: 18pt;
     color: rgb(150, 150, 150);
 }
@@ -42,7 +46,6 @@ body {
 .delete {
     background: none;
     border: none;
-    font-family: Segoe UI;
     font-size: 14pt;
 }
 
@@ -60,7 +63,6 @@ body {
     margin-top: 36px;
     padding: 10px;
     text-align: center;
-    font-family: Segoe UI;
     font-size: 18pt;
     color: rgb(150, 150, 150);
 }
