@@ -28,7 +28,7 @@ var arrayAtletas = [
 	},
 	{
 		nome: 'Fabiana',
-		idade: 20,
+		idade: 21,
 		sexo: 'Feminino',
 		febre: 'n',
 		temp_max: 0,
@@ -40,7 +40,7 @@ var arrayAtletas = [
 	},
 	{
 		nome: 'José Gabriel',
-		idade: 20,
+		idade: 18,
 		sexo: 'Masculino',
 		febre: 'n',
 		temp_max: 0,
@@ -118,6 +118,7 @@ function relatorioAtletas() {
 	console.log(`Idade média dos atletas sintomáticos: ${idadeMediaAtletasSintomaticos()}`)
 	console.log(`Idade média dos atletas assintomáticos: ${idadeMediaAtletasAssintomaticos()}`)
 	console.log(`Temperatura corporal mais alta relatada: ${temperaturaMaximaRelatada()}`)
+	console.log(`Menor idade entre os atletas sintomáticos: ${atletaMaisNovoSintomatico()}`)
 }
 
 function qtdAtletasSintomaticos() {
@@ -192,6 +193,17 @@ function temperaturaMaximaRelatada() {
 			tempMax = arrayAtletas[i].temp_max
 	}
 	return tempMax
+}
+
+function atletaMaisNovoSintomatico() {
+	let menorIdade = arrayAtletas[0].idade
+	for(let i = 0; i < qtdAtletas; i++) {
+		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') == 'iguais') {
+			if(menorIdade > arrayAtletas[i].idade)
+				menorIdade = arrayAtletas[i].idade
+		}
+	}
+	return menorIdade
 }
 
 main()
