@@ -20,26 +20,35 @@ var arrayAtletas = [
 		sexo: 'Masculino',
 		febre: 's',
 		temp_max: 38,
+		sintomas: '',
 		kit: 's',
-		medalhas: 'n'
+		medalhas: 'n',
+		quantas: 0,
+		quais: ''
 	},
 	{
 		nome: 'Fabiana',
 		idade: 20,
 		sexo: 'Feminino',
 		febre: 'n',
+		temp_max: 0,
 		sintomas: 's',
 		kit: 's',
-		medalhas: 'n'
+		medalhas: 's',
+		quantas: 1,
+		quais: 'Ouro'
 	},
 	{
 		nome: 'José Gabriel',
 		idade: 20,
 		sexo: 'Masculino',
 		febre: 'n',
+		temp_max: 0,
 		sintomas: 'n',
 		kit: 's',
-		medalhas: 'n'
+		medalhas: 'n',
+		quantas: 0,
+		quais: ''
 	}
 ]
 
@@ -103,23 +112,33 @@ function cadastrarAtleta() {
 
 function relatorioAtletas() {
 	console.log(`Quantidade de atletas monitorados: ${this.qtdAtletas}`)
-	console.log(`Quantidade de atletas com sintomas: ${qtdAtletasSintomas()}`)
+	console.log(`Quantidade de atletas com sintomas: ${qtdAtletasSintomaticos()}`)
 	console.log(`Porcentagem de atletas com sintomas: ${porcentagemAtletasSintomas()}%`)
 	console.log(`Idade média de todos os atletas: ${idadeMediaTodosAtletas()}`)
 	console.log(`Idade média dos atletas sintomáticos: ${idadeMediaAtletasSintomaticos()}`)
+	console.log(`Idade média dos atletas assintomáticos: ${idadeMediaAtletasAssintomaticos()}`)
 }
 
-function qtdAtletasSintomas() {
-	let qtdSintomas = 0
+function qtdAtletasSintomaticos() {
+	let qtdSintomaticos = 0
 	for(let i = 0; i < this.qtdAtletas; i++) {
 		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') == 'iguais')
-			qtdSintomas++
+			qtdSintomaticos++
 	}
-	return qtdSintomas
+	return qtdSintomaticos
+}
+
+function qtdAtletasAssintomaticos() {
+	let qtdAssintomaticos = 0
+	for(let i = 0; i < this.qtdAtletas; i++) {
+		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') != 'iguais')
+			qtdAssintomaticos++
+	}
+	return qtdAssintomaticos
 }
 
 function porcentagemAtletasSintomas() {
-	let porcentagem = qtdAtletasSintomas() * 100 / this.qtdAtletas
+	let porcentagem = qtdAtletasSintomaticos() * 100 / this.qtdAtletas
 	return parseFloat(porcentagem.toFixed(2))
 }
 
@@ -141,7 +160,19 @@ function idadeMediaAtletasSintomaticos() {
 				somaIdades += arrayAtletas[i].idade
 		}
 	}
-	mediaIdades = somaIdades / qtdAtletasSintomas()
+	mediaIdades = somaIdades / qtdAtletasSintomaticos()
+	return parseFloat(mediaIdades.toFixed(1))
+}
+
+function idadeMediaAtletasAssintomaticos() {
+	let somaIdades = 0
+	let mediaIdades = 0
+	for(let i = 0; i < this.qtdAtletas; i++) {
+		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') != 'iguais') {
+				somaIdades += arrayAtletas[i].idade
+		}
+	}
+	mediaIdades = somaIdades / qtdAtletasAssintomaticos()
 	return parseFloat(mediaIdades.toFixed(1))
 }
 
