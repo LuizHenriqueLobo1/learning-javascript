@@ -117,6 +117,7 @@ function relatorioAtletas() {
 	console.log(`Idade média de todos os atletas: ${idadeMediaTodosAtletas()}`)
 	console.log(`Idade média dos atletas sintomáticos: ${idadeMediaAtletasSintomaticos()}`)
 	console.log(`Idade média dos atletas assintomáticos: ${idadeMediaAtletasAssintomaticos()}`)
+	console.log(`Temperatura corporal mais alta relatada: ${temperaturaMaximaRelatada()}`)
 }
 
 function qtdAtletasSintomaticos() {
@@ -182,6 +183,15 @@ function checaString(string1, string2, string3) {
 		   string2.toLowerCase().localeCompare(string3) == 0)
 				return 'iguais'
 	}
+}
+
+function temperaturaMaximaRelatada() {
+	let tempMax = 0
+	for(let i = 0; i < this.qtdAtletas; i++) {
+		if(arrayAtletas[i].temp_max > tempMax)
+			tempMax = arrayAtletas[i].temp_max
+	}
+	return tempMax
 }
 
 main()
