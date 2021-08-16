@@ -112,9 +112,8 @@ function relatorioAtletas() {
 function qtdAtletasSintomas() {
 	let qtdSintomas = 0
 	for(let i = 0; i < this.qtdAtletas; i++) {
-		if(arrayAtletas[i].febre.toLowerCase() == 's' || 
-		   arrayAtletas[i].sintomas.toLowerCase() == 's')
-				qtdSintomas++
+		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') == 'iguais')
+			qtdSintomas++
 	}
 	return qtdSintomas
 }
@@ -138,13 +137,20 @@ function idadeMediaAtletasSintomaticos() {
 	let somaIdades = 0
 	let mediaIdades = 0
 	for(let i = 0; i < this.qtdAtletas; i++) {
-		if(arrayAtletas[i].febre.toLowerCase() == 's' || 
-		   arrayAtletas[i].sintomas.toLowerCase() == 's') {
+		if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's') == 'iguais') {
 				somaIdades += arrayAtletas[i].idade
 		}
 	}
 	mediaIdades = somaIdades / qtdAtletasSintomas()
 	return parseFloat(mediaIdades.toFixed(1))
+}
+
+function checaString(string1, string2, string3) {
+	for(let i = 0; i < this.qtdAtletas; i++) {
+		if(string1.toLowerCase().localeCompare(string3) == 0 ||
+		   string2.toLowerCase().localeCompare(string3) == 0)
+				return 'iguais'
+	}
 }
 
 main()
