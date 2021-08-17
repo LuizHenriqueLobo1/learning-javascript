@@ -5,7 +5,7 @@ document.getElementById('btn-action').addEventListener('click', () => {
         let txtColor = document.getElementById(`txt-color-${i+1}`)
         let newColor = generateColor()
         color.style.backgroundColor = `${newColor}`
-        txtColor.textContent = `${newColor}`
+        txtColor.value = `${newColor}`
     } 
 })
 
@@ -19,4 +19,11 @@ function generateColor() {
     }
 
     return color;
+}
+
+function copyColor(num) {
+
+    let myColor = document.getElementById(`txt-color-${num}`)
+    myColor.select()
+    document.execCommand('copy')
 }

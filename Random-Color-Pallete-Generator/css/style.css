@@ -16,9 +16,18 @@
     width: 20%;
 }
 
+.color-code {
+    width: 70px;
+    background: none;
+    border: none;
+    text-align: center;
+    outline: 0;
+    cursor: pointer;
+}
+
 .btn {
     position: fixed;
     top: 90%;
-    left: 46%;
+    left: 47%;
     cursor: pointer;
 }
