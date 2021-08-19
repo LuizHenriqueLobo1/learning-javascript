@@ -120,6 +120,8 @@ function relatorioAtletas() {
 	console.log(`Temperatura corporal mais alta relatada: ${temperaturaMaximaRelatada()}`)
 	console.log(`Menor idade entre os atletas sintomáticos: ${atletaMaisNovoSintomatico()}`)
 	console.log(`Maior idade entre os atletas sintomáticos: ${atletaMaisVelhoSintomatico()}`)
+	atletasTomaramKitPorGeneroQtdSintomaticos('Masculino')
+	atletasTomaramKitPorGeneroQtdSintomaticos('Feminino')
 }
 
 function qtdAtletasSintomaticos() {
@@ -216,6 +218,28 @@ function atletaMaisVelhoSintomatico() {
 		}
 	}
 	return maiorIdade
+}
+
+function atletasTomaramKitPorGeneroQtdSintomaticos(sexo) {
+	let qtdSintomaticos = 0
+	console.log(`Atletas do sexo ${sexo} que tomaram o kit:`)
+	console.log(`--------------------------`)
+	for(let i = 0; i < qtdAtletas; i++) {
+		if(arrayAtletas[i].sexo.localeCompare(sexo) == 0) {
+			if(arrayAtletas[i].kit.localeCompare('s') == 0) {
+				console.log(`Nome     : ${arrayAtletas[i].nome}`)
+				console.log(`Sexo     : ${arrayAtletas[i].sexo}`)
+				console.log(`Febre    : ${arrayAtletas[i].febre}`)
+				console.log(`Sintomas : ${arrayAtletas[i].sintomas}`)
+				console.log(`Kit      : ${arrayAtletas[i].kit}`)
+				console.log(`--------------------------`)
+				if(checaString(arrayAtletas[i].febre, arrayAtletas[i].sintomas, 's')) {
+					qtdSintomaticos++
+				}
+			}
+		}
+	}
+	console.log(`Quantidade de atletas do sexo ${sexo} que tomaram o kit e sao sintomaticos: ${qtdSintomaticos}`)
 }
 
 main()
