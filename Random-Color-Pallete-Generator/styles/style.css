@@ -31,3 +31,11 @@
     left: 47%;
     cursor: pointer;
 }
+
+.locker {
+    cursor: pointer;
+}
+
+i {
+    user-select: none;
+}

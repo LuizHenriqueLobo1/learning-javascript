@@ -5,27 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random-Color-Pallete-Generator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <main class="container">
         <div class="colors" id="color-1">
             <input class="color-code" type="text" id="txt-color-1" value="#FFFFFF" onclick="copyColor('1')" title="Click to copy color" readonly>
+            <span class="locker" id="locker-color-1" onclick="lockColor(0)">
+                <i class="material-icons" id="lock-icon-1">lock_open</i>
+            </span>
         </div>
         <div class="colors" id="color-2">
             <input class="color-code" type="text" id="txt-color-2" value="#FFFFFF" onclick="copyColor('2')" title="Click to copy color" readonly>
+            <span class="locker" id="locker-color-2" onclick="lockColor(1)">
+                <i class="material-icons" id="lock-icon-2">lock_open</i>
+            </span>
         </div>
         <div class="colors" id="color-3">
             <input class="color-code" type="text" id="txt-color-3" value="#FFFFFF" onclick="copyColor('3')" title="Click to copy color" readonly>
+            <span class="locker" id="locker-color-3" onclick="lockColor(2)">
+                <i class="material-icons" id="lock-icon-3">lock_open</i>
+            </span>
         </div>
         <div class="colors" id="color-4">
             <input class="color-code" type="text" id="txt-color-4" value="#FFFFFF" onclick="copyColor('4')" title="Click to copy color" readonly>
+            <span class="locker" id="locker-color-4" onclick="lockColor(3)">
+                <i class="material-icons" id="lock-icon-4">lock_open</i>
+            </span>
         </div>
         <div class="colors" id="color-5">
             <input class="color-code" type="text" id="txt-color-5" value="#FFFFFF" onclick="copyColor('5')" title="Click to copy color" readonly>
+            <span class="locker" id="locker-color-5" onclick="lockColor(4)">
+                <i class="material-icons" id="lock-icon-5">lock_open</i>
+            </span>
         </div>
         <input class="btn" type="button" value="Change Pallete" id="btn-action">
     </main>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
