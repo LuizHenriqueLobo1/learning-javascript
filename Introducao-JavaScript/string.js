@@ -1,3 +1,5 @@
+// Using split
+
 const dict = [
     'teste',
     'nobre',
@@ -25,3 +27,11 @@ const stringOnPattern =
     });
   
 console.log(`Quantidade de palavras que seguem o padrão: ${stringOnPattern.length}`);
+
+// Using match
+
+const string = 'Este é um pequeno texto para ser usado de exemplo.';
+const substring = 'ex';
+const amountOfSubstrings = (string.toLowerCase().match(RegExp(substring, 'g') || []).length);
+
+console.log(`Quantidade de ocorrências da substring: ${amountOfSubstrings}`);
