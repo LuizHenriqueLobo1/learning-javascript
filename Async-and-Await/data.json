@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "name": "Luiz Henrique Lobo",
+    "age": 21,
+    "hobbies": [
+        "Programming",
+        "Games",
+        "Music",
+        "Movies"
+    ]
+}
