@@ -1,0 +1,29 @@
+body {
+    margin:  0;
+    padding: 0;
+    background: #BA83E17C;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.input-number {
+    font-size: 2rem;
+}
+
+.btn-action {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.output {
+    font-size: 2rem;
+    margin-top: 40px;
+}
